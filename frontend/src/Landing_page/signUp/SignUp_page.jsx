@@ -12,7 +12,7 @@ function SignUp_page() {
 
     let handleOnSubmit = (e)=>{
           e.preventDefault();
-        axios.post("http://localhost:8080/signUp",{
+        axios.post("https://stockaxis-full-stack-stock-trading.onrender.com/signUp",{
             username:newUsername,
             password: newpassword
         })
@@ -20,7 +20,7 @@ function SignUp_page() {
         console.log(res.data);
         setUsername("");
         setPassword("");
-         window.location.href = "http://localhost:5173/dashboard"; 
+         window.location.href = "https://stockaxis-dashboard.netlify.app/"; 
     })
     .catch((err) => {
         console.error(err);

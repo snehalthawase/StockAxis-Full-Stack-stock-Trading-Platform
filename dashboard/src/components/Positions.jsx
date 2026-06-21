@@ -8,7 +8,7 @@ const Positions = () => {
   let [allPosition , setallPosition] = useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:8080/allPosition")
+    axios.get("https://stockaxis-full-stack-stock-trading.onrender.com/allPosition")
     .then((res)=>{
       console.log(res.data);
       setallPosition(res.data);
